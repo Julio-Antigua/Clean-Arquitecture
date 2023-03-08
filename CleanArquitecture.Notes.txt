@@ -1,0 +1,23 @@
+
+Las estidades deben ire escritas en singular
+
+cuando asignamos virtual a auna propiedad lo que queremos decir es que esta propiedad podra ser sobre escrita por clase derivada por esta en un futuro
+
+Nota: 
+La Capa Presentacion:
+- Se instala el paquete Microsoft.EntityFrameworkCore.Design para poder disparar el proceso de la migracion
+
+La capa Data:
+ - sera encargada de administrar las entidades y clases
+ - Se instala el paquete Microsoft.EntityFrameworkCore.SqlServer para poder convertir las clases en entidades de la base de datos
+ - Se instala el paquete Microsoft.EntityFrameworkCore.Tools para poder migrar la data a la base de datos
+
+ Comandos para migracion:
+ojo: se debe apuntar la capa que tiene la connection de la base de datos que es la capa de data
+ - add-migration "nombreMigracion"
+
+AsNoTracking: se utiliza para hacer consultas a la base de datos pero liberara el objeto en memoria temporar no permitira actualizar o eliminar los datos de la tabla,
+asi que es mas recomendable utilizarlo.
+
+FluentApi:
+utilizaremos el modelBuilder cuando no se utilize la llave foranea con la nomenglatura de entityFramework 
