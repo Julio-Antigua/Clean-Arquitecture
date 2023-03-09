@@ -1,6 +1,9 @@
 ﻿using CleanArquitecture.Data;
 using CleanArquitecture.Domain;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection.Metadata.Ecma335;
 
 StreamerDbContext dbContext = new();
 
@@ -15,11 +18,15 @@ await Task.WhenAll(
     //AddNewStreamerWithVideoId()
     //AddNewActorWithVideo()
     //AddNewDirectorWithVideo()
-    MultipleEntitiesQuery()
+    //MultipleEntitiesQuery()
 );
+
+Pelicula pelicula = new Pelicula();
+pelicula.testFunc();
 
 Console.WriteLine("Presione cualquier tecla para terminar el programa");
 Console.ReadKey();
+
 
 async Task MultipleEntitiesQuery()
 {
@@ -222,3 +229,35 @@ async Task AddNewRecords()
     await dbContext.SaveChangesAsync();
 
 }
+
+public class Pelicula
+{
+    public Pelicula()
+    {
+
+    }
+    public string? Nombre { get; set; }
+
+    List<Pelicula> peliculas = new List<Pelicula>
+        {
+            new Pelicula {Nombre = "matrix"},
+            new Pelicula {Nombre = "mad max"},
+            new Pelicula {Nombre = "avatar"}
+        };
+
+
+    public void testFunc()
+    {
+
+        Func<Pelicula, string> selector = pelicula => "Pelicula:" + pelicula.Nombre;
+
+        IEnumerable<string> videoTitulos = peliculas.Select(selector);
+
+        foreach (string titulos in videoTitulos)
+        {
+            Console.WriteLine(titulos);
+        }
+    }
+ 
+}
+

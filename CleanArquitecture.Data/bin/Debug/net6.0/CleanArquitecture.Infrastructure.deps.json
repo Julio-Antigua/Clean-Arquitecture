@@ -6,14 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "CleanArquitecture.ConsoleApp/1.0.0": {
+      "CleanArquitecture.Infrastructure/1.0.0": {
         "dependencies": {
-          "CleanArquitecture.Domain": "1.0.0",
-          "CleanArquitecture.Infrastructure": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "6.0.14"
+          "CleanArquitecture.Application": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.14",
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.14"
         },
         "runtime": {
-          "CleanArquitecture.ConsoleApp.dll": {}
+          "CleanArquitecture.Infrastructure.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -143,6 +143,11 @@
             "assemblyVersion": "6.0.14.0",
             "fileVersion": "6.0.1423.6205"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/6.0.14": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "6.0.14"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
@@ -490,20 +495,11 @@
         "runtime": {
           "CleanArquitecture.Domain.dll": {}
         }
-      },
-      "CleanArquitecture.Infrastructure/1.0.0": {
-        "dependencies": {
-          "CleanArquitecture.Application": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.14"
-        },
-        "runtime": {
-          "CleanArquitecture.Infrastructure.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "CleanArquitecture.ConsoleApp/1.0.0": {
+    "CleanArquitecture.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -577,6 +573,13 @@
       "sha512": "sha512-JHXK+Zr/8hBxun8x0dg8RoC3LyYzAX3dLFUq/1xLVzep1weA6uOPuMbay8Aagw02jZF4nELvecP7qmIkY+xpVA==",
       "path": "microsoft.entityframeworkcore.sqlserver/6.0.14",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.6.0.14.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/6.0.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bWVJAYk67pVzhqzvs2dR+WbrnI8ioCZQZLyKGDcGAb0Kf0VLhMv0RvP0vshicYl+IWt8C90rMHZspzD0T+sevw==",
+      "path": "microsoft.entityframeworkcore.tools/6.0.14",
+      "hashPath": "microsoft.entityframeworkcore.tools.6.0.14.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",
@@ -808,11 +811,6 @@
       "sha512": ""
     },
     "CleanArquitecture.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CleanArquitecture.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

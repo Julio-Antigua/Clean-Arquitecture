@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CleanArquitecture.Application/1.0.0": {
+        "dependencies": {
+          "CleanArquitecture.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CleanArquitecture.Application.dll": {}
+        }
+      },
+      "CleanArquitecture.Domain/1.0.0": {
+        "runtime": {
+          "CleanArquitecture.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CleanArquitecture.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CleanArquitecture.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
