@@ -69,3 +69,9 @@ C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\obj\
 C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\obj\Debug\net6.0\CleanArchitecture.API.pdb
 C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\obj\Debug\net6.0\CleanArchitecture.API.genruntimeconfig.cache
 C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\obj\Debug\net6.0\ref\CleanArchitecture.API.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\bin\Debug\net6.0\MediatR.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArchitecture.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
