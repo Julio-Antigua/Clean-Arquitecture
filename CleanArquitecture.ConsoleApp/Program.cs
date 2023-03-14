@@ -1,5 +1,5 @@
-﻿using CleanArquitecture.Data;
-using CleanArquitecture.Domain;
+﻿using CleanArquitecture.Domain;
+using CleanArquitecture.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Linq.Expressions;
