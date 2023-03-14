@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CleanArquitecture.Application.Features.Streamers.Commands;
+using CleanArquitecture.Application.Features.Streamers.Commands.CreateStreamer;
 using CleanArquitecture.Application.Features.Videos.Queries.GetVideosList;
 using CleanArquitecture.Domain;
 
@@ -13,7 +13,7 @@ namespace CleanArquitecture.Application.Mappings
             CreateMap<Video, VideosVm>();
 
             //Streamer
-            CreateMap<StreamerCommand, Streamer>().ReverseMap();
+            CreateMap<CreateStreamerCommand, Streamer>().ReverseMap();
         }
     }
 }
