@@ -33,6 +33,6 @@ namespace CleanArquitecture.Application.Contracts.Persistence
         Task<T> UpdateAsync(T entity);
         //Metodo para eliminar un valor
 
-        Task<T> DeleteAsync(int id);
+        Task DeleteAsync(T entity);
     }
 }
