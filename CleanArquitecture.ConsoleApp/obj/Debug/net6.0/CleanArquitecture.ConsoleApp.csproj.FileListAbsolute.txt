@@ -62,3 +62,9 @@ C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleA
 C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleApp\obj\Debug\net6.0\CleanArquitecture.ConsoleApp.pdb
 C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleApp\obj\Debug\net6.0\CleanArquitecture.ConsoleApp.genruntimeconfig.cache
 C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleApp\obj\Debug\net6.0\ref\CleanArquitecture.ConsoleApp.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleApp\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleApp\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleApp\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleApp\bin\Debug\net6.0\MediatR.dll
+C:\Users\julio.antigua\source\repos\CleanArquitecture\CleanArquitecture.ConsoleApp\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
