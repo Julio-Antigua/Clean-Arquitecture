@@ -2,8 +2,9 @@
 
 #nullable disable
 
-namespace CleanArquitecture.Data.Migrations
+namespace CleanArquitecture.Infrastructure.Migrations
 {
+
     public partial class addtablesentitiesrelationships : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

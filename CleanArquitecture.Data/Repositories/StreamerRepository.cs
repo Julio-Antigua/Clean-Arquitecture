@@ -1,4 +1,5 @@
-﻿using CleanArquitecture.Application.Contracts.Persistence;
+﻿
+using CleanArquitecture.Application.Contracts.Persistence;
 using CleanArquitecture.Domain;
 using CleanArquitecture.Infrastructure.Persistence;
 

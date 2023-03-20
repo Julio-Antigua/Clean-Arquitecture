@@ -2,13 +2,11 @@
 using CleanArquitecture.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace CleanArquitecture.Data.Migrations
+namespace CleanArquitecture.Infrastructure.Migrations
 {
     [DbContext(typeof(StreamerDbContext))]
     [Migration("20230306184212_add-new-entities")]

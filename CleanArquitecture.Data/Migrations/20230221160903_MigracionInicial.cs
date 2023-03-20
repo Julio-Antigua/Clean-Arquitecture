@@ -1,9 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using CleanArquitecture.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CleanArquitecture.Data.Migrations
+namespace CleanArquitecture.Infrastructure.Migrations
 {
+   
     public partial class MigracionInicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

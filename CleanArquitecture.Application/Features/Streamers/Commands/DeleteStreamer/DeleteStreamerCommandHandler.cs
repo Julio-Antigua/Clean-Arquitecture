@@ -22,14 +22,14 @@ namespace CleanArquitecture.Application.Features.Streamers.Commands.DeleteStream
 
         public async Task<Unit> Handle(DeleteStreamerCommand request, CancellationToken cancellationToken)
         {
-            Streamer streamerToDelete = await _streamerRepository.DeleteAsync(request.Id);
+            Streamer streamerToDelete = await _streamerRepository.GetByIdAsync(request.Id);
             if(streamerToDelete == null)
             {
                 _logger.LogError($"No se encontro el streamer id {request.Id}");
                 throw new NotFoundException(nameof(Streamer), request.Id);
             }
 
-            await _streamerRepository.DeleteAsync(request.Id);
+            await _streamerRepository.DeleteAsync(streamerToDelete);
             _logger.LogInformation($"El {request.Id} streamer fue eliminado con exito");
 
             return Unit.Value;

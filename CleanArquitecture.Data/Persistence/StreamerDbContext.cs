@@ -11,6 +11,8 @@ namespace CleanArquitecture.Infrastructure.Persistence
         {
         }
 
+      
+
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseSqlServer(@"Data Source=LPTF1S5Q55; 

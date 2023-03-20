@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CleanArquitecture.Application.Features.Directors.Commands.CreateDirector;
 using CleanArquitecture.Application.Features.Streamers.Commands.CreateStreamer;
 using CleanArquitecture.Application.Features.Videos.Queries.GetVideosList;
 using CleanArquitecture.Domain;
@@ -14,6 +15,9 @@ namespace CleanArquitecture.Application.Mappings
 
             //Streamer
             CreateMap<CreateStreamerCommand, Streamer>().ReverseMap();
+
+            //Director
+            CreateMap<CreateDirectorCommand, Director>().ReverseMap();
         }
     }
 }

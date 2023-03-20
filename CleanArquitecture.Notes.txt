@@ -5,7 +5,10 @@ cuando asignamos virtual a auna propiedad lo que queremos decir es que esta prop
 
 Nota: 
 
+------------------------------------------------------------------
 La Capa Presentacion:
+------------------------------------------------------------------
+
 - Se instala el paquete Microsoft.EntityFrameworkCore.Design para poder disparar el proceso de la migracion
 
 La capa Data:
@@ -22,16 +25,17 @@ asi que es mas recomendable utilizarlo.
 
 FluentApi:
 utilizaremos el modelBuilder cuando no se utilize la llave foranea con la nomenglatura de entityFramework 
+
 ---------------------------------------------------------------
-
 La Capa Applications:
-
 ----------------------------------------------------------------
 
 la Carpeta {contracts o contratos}: este debe incluir en su interior las interfaces que represente la abstraccion de la implementacion de los casos de uso.
 	- Persistence: Es porque el tipo de transaccion u operacion se basa en una transaccion o consulta a una base de datos
+	- Infrastructure: Es cuando se hace referencia a un servicio.
 
-la Carpeta {features}: este folder aplicara el patron de diseño CQRS ppara manejar los caso de uso.
+la Carpeta {features}: este folder aplicara el patron de diseño CQRS ppara manejar los caso de uso. 
+Que representa las funcionalidades de los casos de uso que desarrollaremos en nuestra aplicacion
 
 la Carpeta {behaviours o comportamiento}: este se aplicara durante la implementacion de los casos de uso.
 
@@ -46,3 +50,15 @@ Paquetes que se instalan en esta capa:
 
 Patron mediator: Este define un objeto que encapsula la logica de comunicacion entre un conjunto de objetos, 
 ademas promueve un acoplamiento flexible y evita la referencia explicita entre los objetos
+
+PipeLines: es el tubo por el cual transita el request y response de las llamadas del cliente y el servidor, donde su objetivo principal es interceptar los mensajes que se envian
+entre el cliente y el servidor o mi aplicacion y bajo cierta circunstancias de tener o continuar el flujo del mensaje 
+
+Behaviours: 
+
+---------------------------------------------------------------
+La Capa Infraestructure:
+----------------------------------------------------------------
+Paquetes que se instalan en esta capa:
+	- SendGrid.
+

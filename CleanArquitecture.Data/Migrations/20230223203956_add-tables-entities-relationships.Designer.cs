@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace CleanArquitecture.Data.Migrations
+namespace CleanArquitecture.Infrastructure.Migrations
 {
     [DbContext(typeof(StreamerDbContext))]
     [Migration("20230223203956_add-tables-entities-relationships")]

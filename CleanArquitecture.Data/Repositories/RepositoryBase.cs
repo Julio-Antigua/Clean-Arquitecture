@@ -47,7 +47,7 @@ namespace CleanArquitecture.Infrastructure.Repositories
             return await query.ToListAsync();
         }
 
-        public virtual async Task<T> GetByIdAsync(int id) => await _context.Set<T>().FirstOrDefaultAsync();
+        public virtual async Task<T> GetByIdAsync(int id) => await _context.Set<T>().FirstOrDefaultAsync( x => x.Id == id);
 
         public async Task<T> AddAsync(T entity)
         {
@@ -58,6 +58,7 @@ namespace CleanArquitecture.Infrastructure.Repositories
 
         public async Task<T> UpdateAsync(T entity)
         {
+            _context.Set<T>().Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return entity;
@@ -67,6 +68,22 @@ namespace CleanArquitecture.Infrastructure.Repositories
         {
             _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();
+        }
+
+        public void AddEntity(T entity)
+        {
+            _context.Set<T>().Add(entity);
+        }
+
+        public void UpdateEntity(T entity)
+        {
+            _context.Set<T>().Attach(entity);
+            _context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public void DeleteEntity(T entity)
+        {
+            _context.Set<T>().Remove(entity);
         }
     }
 }

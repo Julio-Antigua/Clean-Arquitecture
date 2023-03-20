@@ -34,5 +34,11 @@ namespace CleanArquitecture.Application.Contracts.Persistence
         //Metodo para eliminar un valor
 
         Task DeleteAsync(T entity);
+
+        void AddEntity(T Entity);
+
+        void UpdateEntity(T Entity);
+
+        void DeleteEntity(T Entity);
     }
 }

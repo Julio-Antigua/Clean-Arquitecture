@@ -16,14 +16,17 @@ namespace CleanArquitecture.Infrastructure
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<StreamerDbContext>(options => 
-                options.UseSqlServer(configuration.GetConnectionString("ConnectionString"))
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
             );
 
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IAsyncRepository<>),typeof(RepositoryBase<>));
+
             services.AddScoped<IVideoRepository, VideoRepository>();
             services.AddScoped<IStreamerRepository, StreamerRepository>();
 
             services.Configure<EmailSettings>(c => configuration.GetSection("EmailSettings"));
+
             services.AddTransient<IEmailService,EmailService>();
 
             return services;
