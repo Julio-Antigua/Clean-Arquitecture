@@ -1,9 +1,10 @@
 ﻿using CleanArquitecture.Application.Features.Videos.Queries.GetVideosList;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace CleanArchitecture.API.Controllers
+namespace CleanArquitecture.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
@@ -17,6 +18,7 @@ namespace CleanArchitecture.API.Controllers
         }
 
         [HttpGet("{username}", Name = "GetVideo")]
+        [Authorize]
         [ProducesResponseType(typeof(IEnumerable<VideosVm>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<VideosVm>>> GetVideosByUsername(string username)
         {

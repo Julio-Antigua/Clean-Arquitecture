@@ -1,11 +1,13 @@
-﻿using CleanArquitecture.Application.Features.Streamers.Commands.CreateStreamer;
+﻿using CleanArquitecture.Application.Constans;
+using CleanArquitecture.Application.Features.Streamers.Commands.CreateStreamer;
 using CleanArquitecture.Application.Features.Streamers.Commands.DeleteStreamer;
 using CleanArquitecture.Application.Features.Streamers.Commands.UpdateStreamer;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace CleanArchitecture.API.Controllers
+namespace CleanArquitecture.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
@@ -19,6 +21,7 @@ namespace CleanArchitecture.API.Controllers
         }
 
         [HttpPost(Name = "CreateStreamer")]
+        [Authorize(Roles = nameof(CustomRoles.Administrator))]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<int>> CreateStreamer([FromBody] CreateStreamerCommand createStreamer)
         {
